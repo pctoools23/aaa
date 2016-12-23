@@ -1,8 +1,9 @@
-<?php
-ob_start();
-//@Roonx_Team
+<?php  /* Channel Source: @NorbertTeam
+Channel Creator: @Roonx_Team */
+
 define('API_KEY','توکن');
 $admin =  "ای دی عددی";
+
 $update = json_decode(file_get_contents('php://input'));
 $from_id = $update->message->from->id;
 $chat_id = $update->message->chat->id;
@@ -11,7 +12,7 @@ $data = $update->callback_query->data;
 $text = $update->message->text;
 $message_id = $update->callback_query->message->message_id;
 $message_id_feed = $update->message->message_id;
-$fal = file_get_contents("http://api.roonx.com/falhafez/index.php");
+$fal = file_get_contents("http://api.roonx.com/falhafez");
 function roonx($method,$datas=[]){
     $url = "https://api.telegram.org/bot".API_KEY."/".$method;
     $ch = curl_init();
@@ -97,5 +98,4 @@ $user = file_get_contents('Member.txt');
       $add_user .= $chat_id."\n";
      file_put_contents('Member.txt',$add_user);
     }
-//@Roonx_Team
 	?>
