@@ -1,8 +1,8 @@
 <?php  /* Channel Source: @NorbertTeam
 Channel Creator: @Roonx_Team */
 
-define('API_KEY','توکن');
-$admin =  "ای دی عددی";
+define('312487383:AAE6KUYTEaHU3I_9d9YG3Ff9kFchHg_Kt28');
+$admin =  "36960550";
 
 $update = json_decode(file_get_contents('php://input'));
 $from_id = $update->message->from->id;
